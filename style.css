@@ -649,32 +649,98 @@ a{
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* Hero Section */
   .hero-section-heading {
     font-size: 28px;
+    text-align: center;
+  }
+  .hero-section-description {
+    margin: auto;
+    text-align: center;
+    padding: 0 1rem;
   }
   .hero-section-sub-heading {
     font-size: 24px;
     line-height: 28px;
+    text-align: center;
   }
+
+  /* Fade text hidden on mobile */
   .faded-text,
   .skill-fade-text {
-    /* font-size: 3em;
-    position: static; */
     opacity: 0;
   }
+
+  /* Skills logos smaller */
   .skills-logo {
     width: 40px;
     height: 40px;
   }
+
+  /* Buttons smaller */
   .btn-pink {
     padding: 0.6rem 1.5rem;
     font-size: 16px;
   }
+
+  /* Footer spacing */
   .footer-wrapper {
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* Projects Section Responsive */
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .project-content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .project-skills-container,
+  .project-skill-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: auto;
+  }
+
+  .project-skill {
+    width: 22px;
+    height: 22px;
+  }
+
+  .project-heading {
+    font-size: 1.2rem;
+  }
+
+  .project-sub-heading {
+    font-size: 0.9rem;
+  }
+
+  .project-subheading{
+    margin: auto;
+    font-size: 0.9rem;
+
+  }
+
+  .btn-grp,
+  .btn-group {
+    justify-content: center;
   }
 }
-
 /* Small phones */
 @media (max-width: 480px) {
   .logo {
