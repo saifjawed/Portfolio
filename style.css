@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+:root{
+    --bgorange:#e84949;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.git{
+    margin-left: 15px;
+}
+.link{
+    margin-left: 15px;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:1 rem;
+}
+.logo-container{
+    display:flex;
+    justify-content: baseline;
+    align-items: center;
+}
+.logo{
+    width: 80px;
+    height:80px;
+}
+.nav-items{
+    display:flex;
+    gap:2rem;
+    padding: 0 4em;
+    font-family: "Be Vietnam Pro", serif;
+    font-weight: 300;
+}
+.logo-text{
+    margin-left:-0.8rem;
+    font-size: 30px;
+    font-family: "Be Vietnam Pro", serif;
+}
+.nav-items div{
+    font-size:20px;
+    font-weight: 500px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.nav-items a{
+    color:black;
+}
+.nav-items div:hover{
+    font-weight: bold;
+    transition: 0.3s;
+}
+.hero-section{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin: 4rem auto;
+    gap:5rem;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+.faded-text{
+    user-select: none;
+    font-size: 7em;
+    color:rgb(231, 231, 231);
+    bottom: -21.5%;
+    left:2%;
+    font-weight: bold;
+    transition: all 3s;
+    font-family: "Be Vietnam Pro", serif;
+    /* position: absolute; */
+}
+.hero-section{
+    display:flex;
+    flex-direction:row; /*dekhna hai ek baar*/
+    justify-content: center;
+    gap: 2rem;
+}
+.hero-section-heading{
+    font-size: 35px;
+    color:#343d68;
+    font-weight: 500;
+    margin-block: 30px;
+    font-family: "Be Vietnam Pro", serif;
+}
+.role{
+    color:#4e45d5;
+    font-weight: 800;
+}
+.hero-section-sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+    /* font-family: "Be Vietnam Pro", serif; */
+}
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+    margin-block: 20px;
+}
+.btn-pink{
+    background-color: var(--bgorange);
+    width: fit-content;
+    color:white;
+    padding:0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border:solid 3px transparent;
+    position: relative;
+    z-index: 1;
+    margin-block: 20px;
+}
+
+.btn-pink::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top:0px;
+    left:0;
+    right:0;
+    bottom:0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+.btn-pink:hover::before{
+    transform: scaleX(1);
+}
+.btn-pink:hover{
+    border: solid 3px var(--bgorange);
+    color:black;
+}
+.hero-section-right{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.user-image{
+    padding: 2.5rem;
+    filter:grayscale(1);
+    transition: all 1s;
+    animation: scale-image 5s linear infinite;
+}
+.user-image img{
+    z-index: -9;
+}
+@keyframes scale-image{
+    0%{
+        filter:grayscale(0);
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        filter:grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+    100%{
+        transform: scale(1);
+        filter:grayscale(0);
+    }
+}
+.icon-dots{
+    z-index:9;
+    bottom: -1rem;
+    right:0;
+    animation-name: dots-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes dots-animation{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.icon-cube{
+    z-index:9;
+    top:0.8rem;
+    right:1em;
+    animation-name: cube-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes cube-animation{
+    0%{
+        transform:rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+.icon-circle{
+    z-index:9;
+    left:0;
+    bottom:0;
+    animation-name: shake-effect;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes shake-effect{
+    0%{
+       left:0;
+       bottom:0;
+    }
+    50%{
+       left:5%;
+       bottom:10%;
+    }
+    100%{
+        left:0;
+        bottom:0;
+    }
+}
+.icon-zigzag{
+    z-index:9;
+    top:1.5em;
+    left:0.3em;
+    animation:zigzag 5s ease-in infinite;
+    
+}
+@keyframes zigzag{
+    50%{
+       left:5%;
+       bottom:2%;
+    }
+}
+.icon-plus{
+    z-index:9;
+    top:0.8rem;
+    left:50%;
+    animation:plus 5s ease-in infinite;
+}
+@keyframes plus{
+    50%{
+       top:3%;
+       left:48%;
+    }
+}
+.project-section{
+    background-color: rgb(231,231,231);
+    margin-top: 4rem;
+}
+.page-header{
+    color:var(--bgorange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap:120px;
+}
+.project-card{
+    width: 80%;
+    height: 500px;
+    background-image: url(Project1.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+.project-skill{
+    width: 30px;
+}
+.project-card::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: #1f1f1f9a;
+    /* transform: scaleX(1); */
+}
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+.project-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color:white;
+    z-index: 10;
+    font-family:  "Be Vietnam Pro", serif;
+    opacity:0;
+}
+.project-card:hover .project-number{
+    opacity: 1;
+}
+.project-number-right{
+    right:-40px;
+    top:-45px;
+}
+.project-number-left{
+    left:-40px;
+    top:-45px;
+}
+.project-content{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    font-family: "Be Vietnam Pro", serif;
+    transition: all 0.4s;
+}
+.project-content-left{
+    left: 10%;
+}
+.project-content-right{
+    right:10%;
+}
+.project-skills-container{
+    width: 70%;
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.project-heading{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.project-subheading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+.btn-grp{
+    display:flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+.btn-project:hover{
+    border:none;
+}
+.icon{
+    cursor: pointer;
+    color:white;
+    font-size: 25px;
+    transition: 0.4s;
+}
+.icon:hover{
+    color: var(--bgorange);
+}
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+#project1{
+    background-image: url(assets/Project1.png);
+}
+#project2{
+    margin-left: 120px;
+    background-image: url(assets/Project2.png);
+}
+#project3{
+    background-image:url(assets/Project3.png);
+}
+#project4{
+    margin-left: 120px;
+    background-image: url(assets/Project4.png);
+}
+.skills-container{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+.skill-container-left{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.skill-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    position: relative;
+    gap: 2rem;
+}
+.skill-fade-text{
+    font-size: 9em;
+    font-size: bold;
+    color: rgb(231, 231, 231);
+    bottom:-39%;
+    right: 8%;
+    user-select: none;
+    font-family: "Be Vietnam Pro", serif;
+}
+.blob-style{
+    transform:translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 700px;
+    width: 700px;
+    z-index: -5;
+    animation: blobanimation 3s linear infinite;
+}
+@keyframes blobanimation{
+    50%{
+        top: 54%;
+        left: 56%;
+    }
+}
+.skills-logo{
+    width: 60px;
+    height: 60px;
+    transition: all 0.5s;
+}
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+.skill-heading{
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgorange);
+    line-height: 50px;
+    margin-block: 30px;
+    font-family: "Be Vietnam Pro", serif;
+}
+.caps{
+    font-size: 90px;
+}
+.skill-subheading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+.skill-subheading p{
+    margin: 15px 0;
+}
+.contactus-form-conatiner{
+    width: 100%;
+    background-color: rgb(231, 231, 231);    
+}
+.contactus-heading{
+    font-size: 4em;
+    color: var(--bgorange);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Be Vietnam Pro", serif;
+}
+.contactus-subheading{
+    font-size: 3rem;
+    color: #343d68aa;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Be Vietnam Pro", serif;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    /* margin: 2rem 5rem; */
+}
+.formfield-container{
+    width: 100%;
+    margin-inline:160px;
+}
+.formfield{
+    width: 100%;
+    height: 40px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    font-weight: 500;
+    border: none;
+    margin-top: 27px;
+}
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+#submit-btn{
+    border: none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    margin-left: 160px;
+
+}
+#submit-btn:hover{
+    scale: 0.9;
+}
+/* .submit-icon{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+} */
+.footer-main{
+    position: relative;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 2rem;
+}
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-faded-text{
+    /* position: absolute; */
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 3.5em;
+    font-family: "Be Vietnam Pro", serif;
+}
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+    font-family: "Be Vietnam Pro", serif;
+}
+.link-wrapper div a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+.link-wrapper div a:hover{
+    color: var(--bgorange);
+}
+.insta{
+    margin-right: 1rem;
+}
+.linkd{
+    margin-right: 1rem;
+}
+/* Large desktops */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+  .project-card,
+  #project2,
+  #project4 {
+    margin-left: 0;
+    width: 100%;
+  }
+  .project-content-left,
+  .project-content-right {
+    left: 5% !important;
+    right: 5% !important;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .hero-section-left,
+  .hero-section-right,
+  .navbar,
+  .form,
+  .footer-wrapper {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-items {
+    padding: 0;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .formfield-container,
+  #submit-btn {
+    margin-inline: 0;
+    width: 100%;
+  }
+  .project-heading {
+    font-size: 26px;
+  }
+    .skills-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .skill-container-left,
+  .skill-container-right {
+    width: 100%;
+    align-items: center;
+  }
+  .skill-subheading {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-section-heading {
+    font-size: 28px;
+  }
+  .hero-section-sub-heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .faded-text,
+  .skill-fade-text {
+    /* font-size: 3em;
+    position: static; */
+    opacity: 0;
+  }
+  .skills-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .btn-pink {
+    padding: 0.6rem 1.5rem;
+    font-size: 16px;
+  }
+  .footer-wrapper {
+    gap: 2rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-text {
+    font-size: 24px;
+  }
+  .hero-section-heading {
+    font-size: 22px;
+  }
+  .hero-section-sub-heading {
+    font-size: 18px;
+  }
+  .project-number {
+    font-size: 80px;
+  }
+  .project-heading {
+    font-size: 20px;
+  }
+  .contactus-heading {
+    font-size: 2rem;
+  }
+  .contactus-subheading {
+    font-size: 1.2rem;
+  }
+  .footer-faded-text {
+    font-size: 1.5em;
+  }
+  .link-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .formfield {
+    font-size: 16px;
+    padding: 0 1rem;
+  }
+  .skills-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .skill-container-left,
+  .skill-container-right {
+    width: 100%;
+    align-items: center;
+  }
+  .skill-subheading {
+    width: 100%;
+  }
+}
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #4BB543; /* green for success */
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 20px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+
+.cv-icon-wrapper {
+  position: relative;
+  display: inline-block;
+  /* margin-left: 1rem; */
+}
+
+.cv-icon-wrapper i {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.cv-icon-wrapper i:hover {
+  color: var(--bgorange); /* or any highlight color */
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1000;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cv-icon-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ===== Popup Backdrop ===== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Popup Content Box ===== */
+.popup-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  position: relative;
+  animation: scaleIn 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Close Button ===== */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.close-btn:hover {
+  color: #e63946;
+}
+
+/* ===== Popup Title ===== */
+#popupTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Popup Description ===== */
+#popupDescription {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* ===== Scale-in Animation ===== */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+  .popup-content {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  #popupTitle {
+    font-size: 1.2rem;
+  }
+
+  #popupDescription {
+    font-size: 0.95rem;
+  }
+}
+.hidden {
+  display: none;
+}
+
